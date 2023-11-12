@@ -1,20 +1,43 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Game bắn súng</title>
+    <title>Game Rắn Săn Mồi</title>
     <style>
-        #game-canvas {
-            width: 500px;
+        #game-board {
+            width: 400px;
             height: 400px;
-            background-color: #000;
+            border: 1px solid black;
+        }
+        .snake {
+            width: 20px;
+            height: 20px;
+            background-color: green;
+            position: absolute;
+        }
+        .food {
+            width: 20px;
+            height: 20px;
+            background-color: red;
+            position: absolute;
         }
     </style>
 </head>
 <body>
-    <canvas id="game-canvas"></canvas>
+    <div id="game-board"></div>
 
     <script>
-        // JavaScript code để xử lý logic của trò chơi sẽ được viết ở đây
+        var gameBoard = document.getElementById("game-board");
+        var snake = document.createElement("div");
+        var food = document.createElement("div");
+
+        snake.classList.add("snake");
+        food.classList.add("food");
+
+        gameBoard.appendChild(snake);
+        gameBoard.appendChild(food);
+
+        // Logic của trò chơi sẽ được thêm vào đây
+
     </script>
 </body>
 </html>
